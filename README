@@ -1,0 +1,30 @@
+Description:
+
+This is a simple hack to get email notifications from Zendesk
+into Highrise (and associating those emails with the proper
+deal).
+
+Requirements:
+
+* Python 2.X (should run on any reasonable version)
+* a POP3 mailbox
+* a smarthost for sending email
+
+Installation and Usage:
+
+Set up Zendesk to send the notifications you want to the POP3
+mailbox.
+
+You should then edit the script and change the following variables:
+
+INCOMING_HOST
+INCOMING_USER
+INCOMING_PASS
+OUTGOING_HOST
+OUTGOING_EMAIL
+DEBUG_EMAIL
+
+You can test the script by just running it without any command line
+arguments. When you got it working, just create a cron job like this:
+
+* * * * * someuser /usr/local/bin/zendesk2highrise.py --cron
