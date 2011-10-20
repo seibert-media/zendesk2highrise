@@ -115,7 +115,7 @@ if __name__ == "__main__":
 			DEBUG = False 
 	
 	if DEBUG is True:
-		answer = raw_input("Run script in debug mode (emails will be sent to " + DEBUG_EMAIL + ")? [Y/n] ")
+		answer = raw_input("Run script in debug mode (emails will be sent to " + DEBUG_EMAIL + ")? [y/N] ")
 		if answer != "Y" and answer != "y":
 			print "exiting, run script with --cron to use production settings"
 			sys.exit(0)
