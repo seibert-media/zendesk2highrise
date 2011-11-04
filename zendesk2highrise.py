@@ -84,7 +84,7 @@ def handle_incoming_mail(lines):
 	content = None
 	for part in msg.walk():
 		if part.get_content_type() == "text/plain":
-			content = part.get_payload()
+			content = part.get_payload(decode = True)
 			break
 	if content is None:
 		debug_log("message has no plaintext part, skipping")
